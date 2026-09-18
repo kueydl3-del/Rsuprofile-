@@ -1,0 +1,289 @@
+/* ==========================================================================
+   PRINT / PDF EXPORT STYLESHEET (A4 CV / RESUME FORMAT)
+   Namon Karnsa-art (ณมน การสอาด) - Digital Artist & Front-End Creative
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm;
+  }
+
+  *, *::before, *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+  }
+
+  body {
+    font-family: 'Prompt', 'Mali', sans-serif !important;
+    font-size: 10pt;
+    line-height: 1.5;
+    background: #ffffff !important;
+    color: #2D2A32 !important;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hide interactive web components */
+  .navbar,
+  .doodle-sparkle,
+  .doodle-star,
+  .doodle-arrow,
+  .doodle-swirl,
+  .washi-tape,
+  .floating-badge,
+  .hero-cta,
+  .hero-socials,
+  .skills-nav-tabs,
+  .portfolio-filter-bar,
+  .modal-backdrop,
+  .toast-container,
+  .footer,
+  .project-preview-overlay,
+  .mobile-toggle,
+  .btn,
+  .typing-cursor,
+  .project-footer,
+  .hero-stats-container,
+  .contact-form-card {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    padding: 10px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* CV Header */
+  .hero-section {
+    min-height: auto !important;
+    padding: 0 0 14px !important;
+    border-bottom: 2px solid #2D2A32 !important;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .hero-name {
+    font-size: 20pt !important;
+    font-weight: 700 !important;
+    color: #2D2A32 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hero-name-en {
+    font-size: 12pt !important;
+    color: #5C5862 !important;
+  }
+
+  .typing-wrapper {
+    font-size: 11pt !important;
+    color: #6C5CE7 !important;
+    font-weight: 700 !important;
+    min-height: auto !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-desc {
+    font-size: 9.5pt !important;
+    color: #403C47 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-visual {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .avatar-card {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .avatar-inner {
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 50% !important;
+    border: 2px solid #2D2A32 !important;
+  }
+
+  /* Section Titles */
+  .section-badge {
+    display: none !important;
+  }
+
+  .section-header {
+    text-align: left !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1.5px solid #2D2A32;
+    padding-bottom: 4px;
+  }
+
+  .section-title {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    color: #2D2A32 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 !important;
+  }
+
+  .section-subtitle {
+    display: none !important;
+  }
+
+  /* 2-Column Bento to CV Info */
+  .about-bento-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 14px !important;
+  }
+
+  .sketch-card, .sketch-card-alt {
+    border: none !important;
+    padding: 4px 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .bento-info-list {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    padding-top: 6px !important;
+    border-top: 1px dashed #2D2A32 !important;
+  }
+
+  .bento-info-val {
+    font-size: 9pt !important;
+  }
+
+  /* Timeline */
+  .timeline-line {
+    display: none !important;
+  }
+
+  .timeline-item {
+    padding-left: 0 !important;
+    margin-bottom: 10px !important;
+    page-break-inside: avoid;
+  }
+
+  .timeline-node {
+    display: none !important;
+  }
+
+  .timeline-degree {
+    font-size: 10.5pt !important;
+    font-weight: 700 !important;
+  }
+
+  .timeline-faculty {
+    font-size: 9.5pt !important;
+    color: #6C5CE7 !important;
+  }
+
+  .timeline-desc {
+    font-size: 9pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  /* Skills in Print */
+  .skills-pane {
+    display: block !important;
+    margin-bottom: 8px !important;
+  }
+
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .skill-card {
+    padding: 4px 0 !important;
+  }
+
+  .skill-meter-bg {
+    height: 4px !important;
+    border: 1px solid #2D2A32 !important;
+  }
+
+  .skill-meter-fill {
+    background: #2D2A32 !important;
+  }
+
+  /* Projects */
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .project-preview {
+    display: none !important;
+  }
+
+  .project-body {
+    padding: 0 !important;
+  }
+
+  .project-title {
+    font-size: 10pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .project-desc {
+    font-size: 8.5pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  .project-tag {
+    font-size: 7pt !important;
+    border: 1px solid #2D2A32 !important;
+    padding: 1px 4px !important;
+  }
+
+  /* Certificates */
+  .certs-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+  }
+
+  .cert-card {
+    padding: 4px 0 !important;
+  }
+
+  .cert-title {
+    font-size: 9.5pt !important;
+  }
+
+  .cert-issuer {
+    font-size: 8.5pt !important;
+    color: #6C5CE7 !important;
+  }
+
+  /* Contact Cards */
+  .contact-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  .contact-card-item {
+    padding: 4px 0 !important;
+    flex: 1 1 45% !important;
+    border: none !important;
+  }
+}
